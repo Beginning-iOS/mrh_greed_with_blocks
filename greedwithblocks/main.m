@@ -32,6 +32,12 @@ int main(int argc, const char * argv[])
         dice = [NSMutableArray arrayWithObjects:one, [one copy], [one copy], nil];
         NSLog(@"[1, 1, 1] = %d", [[greed initWithDice:dice] score]);
         
+        // [1,1,1] = 1100
+        [dice removeAllObjects];
+        dice = [NSMutableArray arrayWithObjects:one, [one copy], [one copy], [one copy], nil];
+        NSLog(@"[1, 1, 1, 1] = %d", [[greed initWithDice:dice] score]);
+
+    
     }
     return 0;
 }

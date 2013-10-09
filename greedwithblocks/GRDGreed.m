@@ -27,7 +27,8 @@
 }
 
 - (void)buildScore:(NSMutableArray *)dice {
-    int totalScore = 0;
+    score = 0;
+    int currentScore = 100;
     
     while (dice != nil && ([dice count] > 0)) {
 
@@ -48,7 +49,7 @@
                 
                 return dice;
             };
-            score = 1000;
+            currentScore = 1000;
         }
         else if ([self oneOfAKindForDice:dice ForDie:1]) {
             resetDice =^NSMutableArray *(NSMutableArray *dice) {
@@ -62,11 +63,11 @@
                 [dice removeObjectAtIndex:ndx];
                 return dice;
             };
-            score = 100;
+            currentScore = 100;
             
         }
         
-        totalScore += score;
+        score += currentScore;
         dice = resetDice(dice);
         
     }
