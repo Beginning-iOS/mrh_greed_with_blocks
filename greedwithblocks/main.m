@@ -20,9 +20,15 @@ int main(int argc, const char * argv[])
         
 
         GRDGreed *greed = [GRDGreed alloc];
-        
-        // [1,1,1] = 100
+
+        // [1] = 100
         NSMutableArray *dice;
+        dice = [NSMutableArray arrayWithObjects:one, nil];
+        NSLog(@"[1] = %d", [[greed initWithDice:dice] score]);
+
+        
+        // [1,1,1] = 1000
+        [dice removeAllObjects];
         dice = [NSMutableArray arrayWithObjects:one, [one copy], [one copy], nil];
         NSLog(@"[1, 1, 1] = %d", [[greed initWithDice:dice] score]);
         

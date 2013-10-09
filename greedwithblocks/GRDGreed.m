@@ -50,6 +50,21 @@
             };
             score = 1000;
         }
+        else if ([self oneOfAKindForDice:dice ForDie:1]) {
+            resetDice =^NSMutableArray *(NSMutableArray *dice) {
+                int ndx = 0;
+                NSNumber *currentDice = [dice objectAtIndex:ndx];
+                
+                while ([currentDice intValue] != 1) {
+                    ndx++;
+                    currentDice = [dice objectAtIndex:ndx];
+                }
+                [dice removeObjectAtIndex:ndx];
+                return dice;
+            };
+            score = 100;
+            
+        }
         
         totalScore += score;
         dice = resetDice(dice);
@@ -63,6 +78,16 @@
     
     if ([filteredDice count] >= 3) {
         return true;
+    }
+    
+    return false;
+}
+
+- (bool) oneOfAKindForDice:(NSMutableArray *)dice ForDie:(int)die {
+    for (int ndx = 0; ndx < [dice count]; ndx++) {
+        if ([[dice objectAtIndex:ndx] integerValue] == die) {
+            return true;
+        }
     }
     
     return false;
