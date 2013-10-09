@@ -7,14 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GRDGreed.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSNumber *one, *five;
+        one = [NSNumber numberWithInt:(1)];
+        five = [NSNumber numberWithInt:(5)];
+        
+
+        GRDGreed *greed = [GRDGreed alloc];
+        
+        // [1,1,1] = 100
+        NSMutableArray *dice;
+        dice = [NSMutableArray arrayWithObjects:one, [one copy], [one copy], nil];
+        NSLog(@"[1, 1, 1] = %d", [[greed initWithDice:dice] score]);
         
     }
     return 0;

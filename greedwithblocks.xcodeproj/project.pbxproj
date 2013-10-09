@@ -10,6 +10,7 @@
 		4D854C731804F7FF0066043B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D854C721804F7FF0066043B /* Foundation.framework */; };
 		4D854C761804F7FF0066043B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D854C751804F7FF0066043B /* main.m */; };
 		4D854C7A1804F7FF0066043B /* greedwithblocks.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D854C791804F7FF0066043B /* greedwithblocks.1 */; };
+		4D854C821804FA480066043B /* GRDGreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D854C811804FA480066043B /* GRDGreed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		4D854C751804F7FF0066043B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D854C781804F7FF0066043B /* greedwithblocks-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "greedwithblocks-Prefix.pch"; sourceTree = "<group>"; };
 		4D854C791804F7FF0066043B /* greedwithblocks.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = greedwithblocks.1; sourceTree = "<group>"; };
+		4D854C801804FA480066043B /* GRDGreed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GRDGreed.h; sourceTree = "<group>"; };
+		4D854C811804FA480066043B /* GRDGreed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GRDGreed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				4D854C751804F7FF0066043B /* main.m */,
+				4D854C801804FA480066043B /* GRDGreed.h */,
+				4D854C811804FA480066043B /* GRDGreed.m */,
 				4D854C791804F7FF0066043B /* greedwithblocks.1 */,
 				4D854C771804F7FF0066043B /* Supporting Files */,
 			);
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D854C761804F7FF0066043B /* main.m in Sources */,
+				4D854C821804FA480066043B /* GRDGreed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
